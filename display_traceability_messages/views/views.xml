@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="display_traceability_message" model="ir.ui.view">
+            <field name="name">display_traceability_message</field>
+            <field name="inherit_id" ref="helpdesk.ticket.form" />
+            <field name="arch" type="xml" />
+            <xpath expr="//dic[@class='oe_chatter']" position="inside">
+                <p>felipe</p>
+                
+            </xpath>
+        </record>
+    
+        
+    
+    </data>
+</odoo>
