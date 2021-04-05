@@ -12,14 +12,13 @@
     'category': 'Reports',
 
     'depends': [
-
-        'account_accountant',
-        'account',
-
+        'base', 
+        'mail',
     ],
-
-    'data': [       
-        'views/views.xml',
+    
+    'qweb': [       
+        'static/src/xml/thread.xml',
     ],
+    
     'installable': True
 }
