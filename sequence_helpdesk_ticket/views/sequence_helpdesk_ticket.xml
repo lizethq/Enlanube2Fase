@@ -15,7 +15,7 @@
            <field name="name">Secuencia tickets mesa de ayuda</field>
            <field name="code">sequence.ticket</field>
            <field name="active">TRUE</field>
-           <field name="prefix">>%(year)s/%(month)s/%(day)s/</field>
+           <field name="prefix">%(year)s/%(month)s/%(day)s/</field>
            <field name="padding">4</field>
            <field name="number_next">1</field>
            <field name="number_increment">1</field>
