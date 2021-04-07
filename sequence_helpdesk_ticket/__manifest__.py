@@ -1,5 +1,5 @@
 {
-    'name': 'Reports account thomas',
+    'name': 'Sequence Helpdesk Ticket',
 
     'version': '13.1',
 
@@ -14,7 +14,6 @@
     'depends': [
         'base',
         'helpdesk',
-        'helpdesk.ticket',
     ],
 
     'data': [       
