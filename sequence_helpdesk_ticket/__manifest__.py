@@ -9,22 +9,17 @@
 
     'website': "www.todoo.co",
 
-    'category': 'Reports',
+    'category': 'uncategorized',
 
     'depends': [
-
-        'account_accountant',
-        'account',
-
+        'base',
+        'helpdesk',
+        'helpdesk.ticket',
     ],
 
     'data': [       
-        'reports/report_advances.xml',                   
-        'reports/report_cash.xml',                   
-        'reports/report_credit_note.xml',                   
-        'reports/report_discharge.xml',                   
-        'reports/report_accounting_entries.xml',
-        'reports/report_purchase_invoice.xml',
+        'views/sequence_helpdesk_ticket.xml',                   
+        
     ],
     'installable': True
 }
