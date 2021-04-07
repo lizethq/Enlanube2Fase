@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherit_view_helpdesk_ticket" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.inherit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[(@name='email_cc')]" position="after">
+                    <field name="sequence" />                    
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sequence_helpdesk_ticket" model="ir.sequence">
+            <field name="name">Secuencia de tickets mesa de ayuda</field>
+            <field name="code">helpdesk.ticket</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">%(year)s/%(month)s/%(day)s/</field>
+            <field name="padding">4</field>
+            <field name="number_next">0</field>
+            <field name="number_increment">1</field>
+        </record>
+        
+    
+    </data>
+</odoo>
