@@ -5,10 +5,11 @@ class HelpdeskTicket(models.Model):
     _rec_name = 'sequence'
 
     sequence = fields.Char(string="Secuencia Tickets")
-    display_name = fields.Char("Display Name", related="sla_status_ids.ticket_id",store=True)
-   
+    display_name = fields.Many2one("sla_status_ids.ticket_id", string="Ticket")
+
     @api.model
-    def create(self, vals):    	
-    	vals['sequence'] = self.env['ir.sequence'].next_by_code('sequence.ticket')
-    	result = super(HelpdeskTicket, self).create(vals)
-    	return result
+    def create(self, vals):
+        vals['sequence'] = self.env['ir.sequence'].next_by_code('sequence.ticket')
+        vals['helpdesk_ticket_id.id'] = vals['sequence']
+        result = super(HelpdeskTicket, self).create(vals)
+        return result
