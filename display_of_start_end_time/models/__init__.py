@@ -1,3 +1,3 @@
-from . import project
+from . import models
 
 

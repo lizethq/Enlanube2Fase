@@ -1,40 +1,26 @@
-###############################################################################################
-#
-# Luis Felipe Paternina VitaL
-# lfpaternina93@gmail.com                                
-# 
-# 
-# Cel: +573215062353
-#
-#
-# Bogotá,Colombia
-#
-#
-#
-###############################################################################################
 {
-    'name': 'custom module LFPV',
+    'name': 'Display of strat and end time',
 
     'version': '13.0',
 
-    'author': "Luis Felipe Paternina",
+    'author': "Luis Felipe Navas Pineda",
 
-    'contributors': ['Luis Felipe Paternina lp@todoo.co'],
+    'contributors': ['Luis Felipe Navas Pineda ln@todoo.co'],
 
     'website': "",
 
     'category': 'reports',
 
     'depends': [
-
+        'base',
         'project',
-        
+        'account',       
+        'account.analytic.line',        
     ],
 
-    'data': [
-        
+    'data': [        
         'views/project.xml',
-       
+        'views/account.xml',       
     ],
     'installable': True
 }

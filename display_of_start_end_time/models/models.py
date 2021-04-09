@@ -9,3 +9,8 @@ class Project(models.Model):
     _date_start = fields.Datetime(string='Fecha inicio', index=True, copy=False)
     _date_end = fields.Datetime(string='Fecha final', index=True, copy=False)
 
+class AccountAnalyticLine(models.Model):
+    _inherit = "account.analytic.line"
+
+    _date_start = fields.Datetime(string='Fecha inicio', index=True, copy=False)
+    _date_end = fields.Datetime(string='Fecha final', index=True, copy=False)
