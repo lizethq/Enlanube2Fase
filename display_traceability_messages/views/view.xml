@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="mail_assets_backend_extended" inherit_id="mail.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/display_traceability_messages/static/src/js/thread_widget_extended.js"/>            
+        </xpath>
+    </template>
+</odoo>

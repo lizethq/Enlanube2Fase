@@ -17,7 +17,11 @@
     ],
     
     'qweb': [       
-        'static/src/xml/thread.xml',
+        'static/src/xml/thread.xml',        
+    ],
+    
+    'data': [
+        'views/view.xml',
     ],
     
     'installable': True
