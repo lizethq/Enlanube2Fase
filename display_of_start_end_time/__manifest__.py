@@ -14,13 +14,13 @@
     'depends': [
         'base',
         'project',
-        'account',       
-        'account.analytic.line',        
+        'account',         
     ],
 
     'data': [        
         'views/project.xml',
-        'views/account.xml',       
+        'views/account.xml',
+        
     ],
     'installable': True
 }

@@ -3,18 +3,15 @@
    <record id="inherit_view_timesheet" model="ir.ui.view">
         <field name="name">account.analytic.line.inherit</field>
         <field name="model">account.analytic.line</field>
-        <field name="inherit_id" ref="timesheet_grid.timesheet_view_grid_by_project"/>
+        <field name="inherit_id" ref="timesheet_grid.timesheet_view_form"/>
         <field name="arch" type="xml">
-           <xpath expr="//field[(@name='task_id')]" position="after">
-               <field name="_date_start"/>
-               <field name="_date_end"/>
-               
-           </xpath>
+            <xpath expr="//field[@name='date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[(@name='date')]" position="after">
+               <field name="_start_date"/>
+               <field name="_end_date"/>
+            </xpath>
         </field>
     </record>
-
 </odoo>
-
-              
-       
-

@@ -3,17 +3,19 @@
    <record id="inherit_view_project_task" model="ir.ui.view">
         <field name="name">project.task.inherit</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+       <field name="groups_id" eval="[(6,0, (ref('hr_timesheet.group_hr_timesheet_user'),))]"/>
         <field name="arch" type="xml">
-           <xpath expr="//field[(@name='timesheet_ids')]" position="inside">
-               <field name="_date_start"/>
-               
-           </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='date']" position="after">
+               <field name="_start_date"/>
+               <field name="_end_date"/>                
+            </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='unit_amount']" position="attributes">
+                <attribute name="readonly">1</attribute>                
+            </xpath>
         </field>
     </record>
-
 </odoo>
-
-              
-       
-
